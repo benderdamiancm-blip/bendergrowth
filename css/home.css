@@ -1,0 +1,206 @@
+/* ============================================================
+   Bender Growth · home.css
+   Estilos específicos de la página de inicio (index.html).
+   Depende de global.css.
+   ============================================================ */
+
+/* Logo del nav en home (ligeramente menor que el base) */
+.nav-logo img { height: 52px; }
+@media (max-width: 860px) { .nav-logo img { height: 40px; } }
+
+/* Ancho de contenido de la home */
+.section-inner { max-width: 1180px; }
+
+/* --- Hero --- */
+.hero { padding: 168px 28px 128px; }
+.hero-inner { max-width: 1180px; margin: 0 auto; }
+.hero h1 {
+  font-size: clamp(40px, 6.2vw, 76px); font-weight: 700;
+  letter-spacing: -0.025em; line-height: 1.04; color: var(--ink);
+  margin: 48px 0 36px; max-width: 22ch; text-wrap: balance;
+}
+.hero h1 em { color: var(--gold); font-weight: 500; font-style: italic; }
+.hero p.lead {
+  font-size: clamp(17px, 1.5vw, 21px); line-height: 1.55;
+  color: rgba(14,28,46,0.68); max-width: 64ch; margin-bottom: 56px;
+  text-wrap: pretty;
+}
+.hero p.lead strong { color: var(--ink); font-weight: 600; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-bottom: 80px; }
+
+/* --- Strip de contexto --- */
+.strip {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+  border-top: 1px solid rgba(14,28,46,0.14);
+  border-bottom: 1px solid rgba(14,28,46,0.14);
+}
+.strip > div { padding: 28px 28px; border-right: 1px solid rgba(14,28,46,0.10); }
+.strip > div:first-child { padding-left: 0; }
+.strip > div:last-child { padding-right: 0; border-right: none; }
+.strip-label {
+  display: block; font-size: 10px; font-weight: 600;
+  letter-spacing: 0.30em; text-transform: uppercase;
+  color: rgba(14,28,46,0.42); margin-bottom: 10px;
+}
+.strip-value { font-size: 15px; font-weight: 500; color: var(--ink); line-height: 1.4; }
+@media (max-width: 720px) {
+  .strip { grid-template-columns: 1fr; }
+  .strip > div { padding: 24px 0; border-right: none; border-bottom: 1px solid rgba(14,28,46,0.10); }
+  .strip > div:last-child { border-bottom: none; }
+}
+
+/* --- Cita standalone --- */
+.standalone-quote {
+  max-width: 880px; margin: 88px auto 0;
+  text-align: center;
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 300; font-style: italic;
+  letter-spacing: -0.01em; line-height: 1.25;
+  color: var(--ink);
+  padding: 56px 24px 0;
+  border-top: 1px solid rgba(14,28,46,0.14);
+}
+.standalone-quote::after {
+  content: ""; display: block; height: 2px; width: 64px;
+  background: var(--gold); margin: 36px auto 0;
+}
+
+/* --- Grid 2 col (qué es / no somos) --- */
+.grid-2 {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 80px;
+  align-items: start;
+}
+@media (max-width: 860px) { .grid-2 { grid-template-columns: 1fr; gap: 56px; } }
+
+.lead-block p {
+  font-size: 17px; line-height: 1.65; color: rgba(14,28,46,0.72);
+  margin-bottom: 22px; text-wrap: pretty;
+}
+.lead-block p:last-child { margin-bottom: 0; }
+.lead-block p strong { color: var(--ink); font-weight: 600; }
+
+.nosomos h3 {
+  font-size: 14px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--ink);
+  padding-bottom: 18px; border-bottom: 1px solid rgba(14,28,46,0.14);
+  margin-bottom: 6px;
+}
+.nosomos li {
+  display: flex; gap: 16px; align-items: center;
+  padding: 18px 0; border-bottom: 1px solid rgba(14,28,46,0.08);
+}
+.nosomos li:last-child { border-bottom: none; }
+.nosomos li span:first-child {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.20em;
+  color: rgba(14,28,46,0.30); width: 24px; flex-shrink: 0;
+}
+.nosomos li span:last-child {
+  font-size: 15px; line-height: 1.5; color: rgba(14,28,46,0.72);
+}
+
+/* --- Cómo trabajamos (3 tarjetas) --- */
+.three-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(14,28,46,0.14);
+}
+.three-cards > div {
+  padding: 56px 40px; border-bottom: 1px solid rgba(14,28,46,0.14);
+  border-right: 1px solid rgba(14,28,46,0.14);
+}
+.three-cards > div:first-child { padding-left: 0; }
+.three-cards > div:last-child { padding-right: 0; border-right: none; }
+.three-cards .num { display: flex; align-items: baseline; gap: 14px; margin-bottom: 28px; }
+.three-cards .num span:first-child {
+  font-size: 42px; font-weight: 300; color: var(--gold); line-height: 1;
+}
+.three-cards .num span:last-child {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.28em;
+  text-transform: uppercase; color: rgba(14,28,46,0.45);
+}
+.three-cards h3 {
+  font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+  color: var(--ink); margin-bottom: 18px; line-height: 1.2;
+}
+.three-cards p {
+  font-size: 15px; line-height: 1.65; color: rgba(14,28,46,0.65);
+  text-wrap: pretty;
+}
+@media (max-width: 860px) {
+  .three-cards { grid-template-columns: 1fr; }
+  .three-cards > div { padding: 40px 0 !important; border-right: none; }
+}
+
+/* --- Showcase Método Prisma --- */
+.prisma-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+@media (max-width: 860px) { .prisma-grid { grid-template-columns: 1fr; gap: 56px; } }
+.prisma-mark { margin-bottom: 36px; opacity: 0.95; }
+.prisma-grid h2 {
+  font-size: clamp(36px, 5vw, 60px); font-weight: 700;
+  letter-spacing: -0.025em; line-height: 1.04; margin-bottom: 24px;
+}
+.prisma-grid .lead {
+  font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55;
+  color: rgba(236,231,221,0.78); margin-bottom: 40px;
+  max-width: 48ch; font-weight: 300; text-wrap: pretty;
+}
+.prisma-grid .lead strong { color: var(--bone); font-weight: 600; }
+.etapas-mini {
+  display: flex; flex-direction: column;
+  border-top: 1px solid rgba(236,231,221,0.16);
+}
+.etapas-mini > div {
+  padding: 32px 0; border-bottom: 1px solid rgba(236,231,221,0.16);
+  display: flex; gap: 28px; align-items: flex-start;
+}
+.etapas-mini > div:last-child { border-bottom: none; }
+.etapas-mini .e-num { font-size: 32px; font-weight: 300; line-height: 1; min-width: 56px; }
+.etapas-mini .e-1 .e-num { color: var(--gold); }
+.etapas-mini .e-2 .e-num { color: rgba(194,160,107,0.65); }
+.etapas-mini .e-3 .e-num { color: rgba(194,160,107,0.45); }
+.etapas-mini h3 {
+  font-size: 16px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--bone); margin-bottom: 10px;
+}
+.etapas-mini .e-2 h3, .etapas-mini .e-3 h3 { color: rgba(236,231,221,0.78); }
+.etapas-mini p {
+  font-size: 15px; line-height: 1.6; color: rgba(236,231,221,0.65);
+  text-wrap: pretty;
+}
+.etapas-mini .e-2 p, .etapas-mini .e-3 p { color: rgba(236,231,221,0.55); }
+
+/* --- Fundador (home) --- */
+.fundador-grid {
+  display: grid; grid-template-columns: 380px 1fr; gap: 64px; align-items: start;
+}
+@media (max-width: 860px) {
+  .fundador-grid { grid-template-columns: 1fr; gap: 48px; }
+  .photo-frame { max-width: 380px; margin: 0 auto; }
+}
+.fundador-content h2 {
+  font-size: clamp(30px, 3.8vw, 44px); font-weight: 700;
+  letter-spacing: -0.02em; line-height: 1.05; color: var(--ink);
+  margin: 16px 0 8px;
+}
+.li-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-top: 28px; padding: 14px 22px;
+  border: 1px solid rgba(14,28,46,0.18);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--ink);
+  transition: background .2s, color .2s, border-color .2s;
+}
+.li-btn:hover { background: var(--ink); color: var(--bone); border-color: var(--ink); }
+
+/* --- CTA final --- */
+.cta-final { padding: 144px 28px; background: var(--bone-2); }
+.cta-final-inner { max-width: 880px; margin: 0 auto; text-align: center; }
+.cta-final h2 {
+  font-size: clamp(32px, 4.4vw, 56px); font-weight: 700;
+  letter-spacing: -0.025em; line-height: 1.08; color: var(--ink);
+  margin: 24px auto 28px; max-width: 22ch; text-wrap: balance;
+}
+.cta-final p {
+  font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6;
+  color: rgba(14,28,46,0.65); margin: 0 auto 48px;
+  max-width: 56ch; text-wrap: pretty;
+}
