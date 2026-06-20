@@ -164,7 +164,7 @@ h2.section-title.light { color: var(--bone); }
 }
 .photo-frame .photo {
   aspect-ratio: 4/5; background: var(--ink);
-  background-image: url("/assets/img/fotos/damian-bender.jpg");
+  background-image: url("/assets/img/fotos/damian-bender.jpeg");
   background-size: cover; background-position: center 22%;
 }
 .photo-meta {
