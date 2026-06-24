@@ -22,10 +22,13 @@ bender-growth-web/
 ├── index.html              # Página de inicio
 ├── metodo-prisma/
 │   └── index.html          # Subpágina del Método Prisma  → /metodo-prisma
+├── conversaciones/
+│   └── index.html          # Subpágina para charlas con profesionales  → /conversaciones
 ├── css/
 │   ├── global.css          # Tokens, reset, nav, botones, footer (compartido)
 │   ├── home.css            # Estilos del inicio
 │   └── metodo-prisma.css   # Estilos de la subpágina
+│   └── conversaciones.css 
 ├── js/
 │   └── main.js             # Año dinámico del footer
 ├── assets/
