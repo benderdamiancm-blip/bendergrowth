@@ -2,7 +2,7 @@
 
 Sitio web de **Bender Growth**, consultoría de marca personal y arquitectura de activos digitales para profesionales con trayectoria. La web presenta la consultoría y su metodología insignia, el **Método Prisma**: un sistema de tres etapas que ordena lo que el profesional ya sabe para hacerlo visible y traerle mejores clientes.
 
-🔗 **Producción:** https://bendergrowth.vercel.app *(deploy en Vercel)*
+🔗 **Producción:** https://bendergrowth.org *(deploy en Vercel)*
 
 ---
 
@@ -76,16 +76,6 @@ El sitio es estático: no hay build. La configuración relevante está en `verce
 - Cache headers de larga duración para `assets/`.
 
 Pasos: importar el repositorio en Vercel → *Framework Preset:* **Other** → *Root Directory:* `./` → *Deploy*.
-
-### Independencia del dominio
-
-El sitio funciona en cualquier dominio sin cambios: todas las rutas internas (CSS, JS, imágenes, navegación) son **raíz-relativas** (`/css/...`, `/metodo-prisma`), y el `canonical` es relativo, así que se autoajusta al dominio que sirva la página.
-
-Las únicas URLs absolutas son las de redes sociales / buscadores (Open Graph, `sitemap.xml`, `robots.txt`, JSON-LD), apuntadas hoy a `https://bendergrowth.vercel.app`. Si más adelante se conecta el dominio propio (`bendergrowth.org`), basta reemplazar `bendergrowth.vercel.app` por `bendergrowth.org` en estos archivos:
-
-- `index.html` y `metodo-prisma/index.html` (Open Graph + JSON-LD)
-- `sitemap.xml`
-- `robots.txt`
 
 ---
 
