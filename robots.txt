@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bendergrowth.vercel.app/sitemap.xml
+Sitemap: https://bendergrowth.org/sitemap.xml
