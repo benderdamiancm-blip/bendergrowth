@@ -1,0 +1,160 @@
+/* ============================================================
+   Bender Growth · conversaciones.css
+   Estilos específicos de /conversaciones.
+   Depende de global.css.
+
+   Nota: algunos bloques (hero, fundador-grid, .pq-*) reutilizan
+   patrones visuales del Método Prisma, replicados acá para que
+   esta página sea autocontenida (mismo criterio que home.css
+   y metodo-prisma.css).
+   ============================================================ */
+
+/* Punto dorado antes del CTA del nav (consistencia con metodo-prisma) */
+.nav-cta::before {
+  content: ""; display: inline-block; width: 6px; height: 6px;
+  background: var(--gold); border-radius: 50%;
+}
+
+/* --- Hero (centrado, mismo patrón que metodo-prisma) --- */
+.hero {
+  padding: 188px 28px 112px; max-width: 1080px; margin: 0 auto;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.hero h1 {
+  font-size: clamp(40px, 6vw, 72px); font-weight: 700;
+  letter-spacing: -0.025em; line-height: 1.05; color: var(--ink);
+  margin: 36px 0 32px; max-width: 18ch; text-wrap: balance;
+}
+.hero h1 em { color: var(--gold); font-weight: 500; font-style: italic; }
+.hero p.lead {
+  font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55;
+  color: rgba(14,28,46,0.68); max-width: 62ch; margin-bottom: 48px;
+  text-wrap: pretty;
+}
+.hero p.lead strong { color: var(--ink); font-weight: 600; }
+.hero-actions {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: center; gap: 24px;
+}
+.hero-note {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(14,28,46,0.5); font-weight: 600;
+}
+
+/* --- Para quién (variante de una columna, centrada) --- */
+.pq-single {
+  max-width: 760px; margin: 0 auto;
+}
+.pq-single .pq-list {
+  display: flex; flex-direction: column; gap: 32px;
+}
+.pq-item { display: flex; gap: 18px; align-items: flex-start; }
+.pq-item .pq-icon { flex-shrink: 0; margin-top: 2px; }
+.pq-item.si .pq-icon { color: var(--gold); }
+.pq-item h4 {
+  font-size: 17px; font-weight: 700; color: var(--ink);
+  letter-spacing: -0.005em; line-height: 1.3;
+}
+.pq-item p {
+  font-size: 15px; line-height: 1.65; color: rgba(14,28,46,0.62);
+  margin-top: 8px; text-wrap: pretty;
+}
+
+/* --- Sección oscura: encabezado adaptado --- */
+.section.dark .section-head h2 { color: var(--bone); }
+.section.dark .section-head p { color: rgba(236,231,221,0.72); }
+.section.dark .eyebrow { color: var(--gold); }
+
+/* --- Momentos (qué pasa en esos 40 min): 3 columnas sobre fondo dark --- */
+.momentos {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  max-width: 1100px; margin: 0 auto;
+}
+@media (max-width: 880px) { .momentos { grid-template-columns: 1fr; } }
+.momento {
+  padding: 40px 36px;
+  border: 1px solid rgba(236,231,221,0.14);
+  background: rgba(255,255,255,0.03);
+  display: flex; flex-direction: column;
+}
+.momento .num {
+  font-size: 13px; font-weight: 600; letter-spacing: 0.20em;
+  color: var(--gold);
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(236,231,221,0.14);
+  display: inline-block;
+}
+.momento h3 {
+  font-size: 19px; font-weight: 700; color: var(--bone);
+  margin-bottom: 14px; letter-spacing: -0.01em; line-height: 1.3;
+}
+.momento p {
+  font-size: 15px; line-height: 1.65; color: rgba(236,231,221,0.7);
+  text-wrap: pretty;
+}
+
+/* --- Fundador (mismo patrón que metodo-prisma) --- */
+.fundador-grid {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; grid-template-columns: 380px 1fr; gap: 64px; align-items: center;
+}
+@media (max-width: 860px) {
+  .fundador-grid { grid-template-columns: 1fr; gap: 48px; }
+  .photo-frame { max-width: 380px; margin: 0 auto; }
+}
+.fundador-content h2 {
+  font-size: clamp(28px, 3.6vw, 40px); font-weight: 700;
+  letter-spacing: -0.02em; line-height: 1.1; color: var(--ink);
+  margin: 16px 0 8px;
+}
+.fundador-content .quote {
+  font-size: 22px; font-weight: 300; font-style: italic;
+  line-height: 1.4; color: var(--ink); margin-bottom: 28px;
+}
+.fundador-content p.bio {
+  font-size: 15px; line-height: 1.7; color: rgba(14,28,46,0.7);
+  margin-bottom: 18px; text-wrap: pretty;
+}
+.badge-block { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; }
+.badge-row {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 16px 20px; background: var(--bone-2);
+  border: 1px solid rgba(14,28,46,0.10); position: relative;
+}
+.badge-row::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px; background: var(--gold);
+}
+.badge-row .body { margin-left: 6px; }
+.badge-row .label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--ink);
+  display: block; margin-bottom: 4px;
+}
+.badge-row p { font-size: 14px; line-height: 1.55; color: rgba(14,28,46,0.65); }
+
+/* --- Wrapper del embed de Cal.com --- */
+.cal-wrapper {
+  max-width: 1080px; margin: 0 auto;
+  background: var(--bone-2);
+  border: 1px solid rgba(14,28,46,0.10);
+  padding: 8px;
+}
+#cal-inline {
+  background: var(--bone-2);
+}
+.cal-fallback {
+  padding: 48px 28px; text-align: center;
+}
+.cal-fallback p {
+  font-size: 15px; color: rgba(14,28,46,0.7);
+  margin-bottom: 24px;
+}
+
+/* Ajuste responsive para el hero en pantallas chicas */
+@media (max-width: 720px) {
+  .hero { padding: 148px 22px 80px; }
+  .section { padding: 88px 22px; }
+}
