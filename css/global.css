@@ -10,6 +10,7 @@
   --bone: #ECE7DD;
   --bone-2: #FFFFFF;
   --gold: #C2A06B;
+  --mist: #6E92A6;
 }
 
 /* --- Reset / base --- */
@@ -41,6 +42,17 @@ button:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
+
+/* --- Botón flotante de WhatsApp (compartido) --- */
+.wa-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 60;
+  background: #25D366; color: #FFFFFF;
+  width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(14,28,46,0.24);
+  transition: transform .2s;
+}
+.wa-float:hover { transform: scale(1.06); }
 
 /* --- Nav --- */
 .nav {
